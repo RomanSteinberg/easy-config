@@ -71,7 +71,7 @@ class Config(metaclass=SingletonMeta):
         is_valid = self._update_config(
             config, local_config, config_name=self._default_source, issues_to_print=config_issues
         )
-        if len(config_issues) > 1:
+        if len(config_issues) > 0:
             print(f'Problem(s) with configs:\n{"".join(config_issues)}\n'
                   f'Check and correct your {_make_bold(self._default_source)} '
                   f'and {_make_bold(self._user_source)}!')
